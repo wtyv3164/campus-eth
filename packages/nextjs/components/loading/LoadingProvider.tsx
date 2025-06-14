@@ -12,7 +12,7 @@ export const LoadingProvider = ({ children }: { children: React.ReactNode }) => 
     setIsTransitioning(true);
     const timer = setTimeout(() => {
       setIsTransitioning(false);
-    }, 1500); // 动画持续时间
+    }, 1500); // 动画持续时间---1500
 
     return () => clearTimeout(timer);
   }, [pathname]); // 当路由变化时触发
