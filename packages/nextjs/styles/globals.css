@@ -1,66 +1,113 @@
-@import "tailwindcss";
+/* 导入 Tailwind CSS 框架 */
+@import "tailwindcss"; 
 
+/* 定义自定义的 dark 变体，用于处理深色主题样式 */
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+/* 定义了两个自定义 CSS 变量：
+
+--shadow-center: 中心阴影效果
+--animate-pulse-fast: 快速脉冲动画 */
 @theme {
   --shadow-center: 0 0 12px -2px rgb(0 0 0 / 0.05);
   --animate-pulse-fast: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+/* 启用 DaisyUI 插件，配置浅色和深色主题，并设置深色主题为首选 */
 @plugin "daisyui" {
   themes:
     light,
     dark --prefersdark;
 }
 
+/* 浅色主题配置
+定义了完整的浅色主题色彩方案： */
 @plugin "daisyui/theme" {
   name: "light";
 
+  /* 主色调 - 苹果经典黑色 */
   --color-primary: #93bbfb;
-  --color-primary-content: #212638;
-  --color-secondary: #dae8ff;
-  --color-secondary-content: #212638;
-  --color-accent: #93bbfb;
-  --color-accent-content: #212638;
-  --color-neutral: #212638;
-  --color-neutral-content: #ffffff;
+  --color-primary-content: #ffffff;
+  
+  /* 次要色调 - 浅灰色系 */
+  --color-secondary: #f5f5f7;
+  --color-secondary-content: #1d1d1f;
+  
+  /* 强调色 - 苹果蓝色 */
+  --color-accent: #007aff;
+  --color-accent-content: #ffffff;
+  
+  /* 中性色 - 深灰色 */
+  --color-neutral: #1d1d1f;
+  --color-neutral-content: #f5f5f7;
+  
+  /* 基础背景色 - 纯白和浅灰 */
   --color-base-100: #ffffff;
-  --color-base-200: #f4f8ff;
-  --color-base-300: #dae8ff;
-  --color-base-content: #212638;
-  --color-info: #93bbfb;
-  --color-success: #34eeb6;
-  --color-warning: #ffcf72;
-  --color-error: #ff8863;
+  --color-base-200: #fbfbfd;
+  --color-base-300: #f5f5f7;
+  --color-base-content: #1d1d1f;
+  
+  /* 状态色 - 信息提示 */
+  --color-info: #007aff;
+  
+  /* 状态色 - 成功 (苹果绿) */
+  --color-success: #30d158;
+  
+  /* 状态色 - 警告 (苹果橙) */
+  --color-warning: #ff9500;
+  
+  /* 状态色 - 错误 (苹果红) */
+  --color-error: #ff3b30;
 
-  --radius-field: 9999rem;
-  --radius-box: 1rem;
+  /* 圆角设置 - 苹果风格的圆角 */
+  --radius-field: 0.375rem;  /* 6px - 苹果常用的圆角 */
+  --radius-box: 0.75rem;     /* 12px - 卡片和容器圆角 */
   --tt-tailw: 6px;
 }
 
+/* 深色主题配置
+定义了对应的深色主题色彩方案： */
 @plugin "daisyui/theme" {
   name: "dark";
 
-  --color-primary: #212638;
-  --color-primary-content: #f9fbff;
-  --color-secondary: #323f61;
-  --color-secondary-content: #f9fbff;
-  --color-accent: #4969a6;
-  --color-accent-content: #f9fbff;
-  --color-neutral: #f9fbff;
-  --color-neutral-content: #385183;
-  --color-base-100: #385183;
-  --color-base-200: #2a3655;
-  --color-base-300: #212638;
-  --color-base-content: #f9fbff;
-  --color-info: #385183;
-  --color-success: #34eeb6;
-  --color-warning: #ffcf72;
-  --color-error: #ff8863;
+  /* 主色调 - 苹果深色模式白色 */
+  --color-primary: #25272a;
+  --color-primary-content: #000000;
+  
+  /* 次要色调 - 深灰色系 */
+  --color-secondary: #2c2c2e;
+  --color-secondary-content: #f5f5f7;
+  
+  /* 强调色 - 苹果蓝色 (深色模式调整) */
+  --color-accent: #0a84ff;
+  --color-accent-content: #000000;
+  
+  /* 中性色 - 浅灰色 */
+  --color-neutral: #f5f5f7;
+  --color-neutral-content: #1c1c1e;
+  
+  /* 基础背景色 - 苹果深色模式背景 */
+  --color-base-100: #000000;      /* 纯黑背景 */
+  --color-base-200: #1c1c1e;      /* 深灰背景 */
+  --color-base-300: #2c2c2e;      /* 中灰背景 */
+  --color-base-content: #f5f5f7;  /* 浅灰文本 */
+  
+  /* 状态色 - 信息提示 */
+  --color-info: #0a84ff;
+  
+  /* 状态色 - 成功 (苹果绿 - 深色模式) */
+  --color-success: #32d74b;
+  
+  /* 状态色 - 警告 (苹果橙 - 深色模式) */
+  --color-warning: #ff9f0a;
+  
+  /* 状态色 - 错误 (苹果红 - 深色模式) */
+  --color-error: #ff453a;
 
-  --radius-field: 9999rem;
-  --radius-box: 1rem;
-
+  /* 圆角设置 - 与浅色主题保持一致 */
+  --radius-field: 0.375rem;  /* 6px - 苹果常用的圆角 */
+  --radius-box: 0.75rem;     /* 12px - 卡片和容器圆角 */
+  
   --tt-tailw: 6px;
   --tt-bg: var(--color-primary);
 }
@@ -73,6 +120,8 @@
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
+/* 为了兼容 Tailwind CSS v4，设置默认边框颜色
+还包含了基础的 HTML 元素样式重置 */
 @layer base {
 
   *,
@@ -102,6 +151,7 @@
 
 :root,
 [data-theme] {
+  /*  */
   background: var(--color-base-200);
 }
 

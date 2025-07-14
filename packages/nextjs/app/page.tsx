@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <div className="px-5">
           <h1 className="text-center">
             <span className="block text-2xl mb-2">欢迎来到</span>
-            <span className="block text-4xl font-bold">资源共享平台</span>
+            <span className="block text-4xl font-bold">校园资源共享平台</span>
           </h1>
           <div className="flex justify-center items-center space-x-2 flex-col">
             <p className="my-2 font-medium">Connected Address:</p>
