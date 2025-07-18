@@ -1,7 +1,7 @@
 import "@rainbow-me/rainbowkit/styles.css";
 import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithProviders";
 import { ThemeProvider } from "~~/components/ThemeProvider";
-import { LoadingProvider } from "~~/components/loading/LoadingProvider";
+// import { LoadingProvider } from "~~/components/loading/LoadingProvider";  注释掉了加载组件
 import "~~/styles/globals.css";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
@@ -15,10 +15,10 @@ const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
       <body>
         <ThemeProvider enableSystem>
           <ScaffoldEthAppWithProviders>
-            <LoadingProvider>
-              {/* ✅ 包裹 loading 监听逻辑 */}
-              {children}
-            </LoadingProvider>
+            {/* <LoadingProvider> */}
+            {/* ✅ 包裹 loading 监听逻辑 */}
+            {children}
+            {/* </LoadingProvider> */}
           </ScaffoldEthAppWithProviders>
         </ThemeProvider>
       </body>

@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <div className="px-5">
           <h1 className="text-center">
             <span className="block text-2xl mb-2">欢迎来到</span>
-            <span className="block text-4xl font-bold">校园资源共享平台</span>
+            <span className="block text-4xl font-bold">Web3平台</span>
           </h1>
           <div className="flex justify-center items-center space-x-2 flex-col">
             <p className="my-2 font-medium">Connected Address:</p>
@@ -24,19 +24,19 @@ const Home: NextPage = () => {
 
           <p className="text-center text-lg">
             Get started by editing{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
+            {/* <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
               packages/nextjs/app/page.tsx
-            </code>
+            </code> */}
           </p>
           <p className="text-center text-lg">
             Edit your smart contract{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
+            {/* <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
               YourContract.sol
             </code>{" "}
             in{" "}
             <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
               packages/hardhat/contracts
-            </code>
+            </code> */}
           </p>
         </div>
 
