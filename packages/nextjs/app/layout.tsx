@@ -7,7 +7,7 @@ import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 // ✅ 新增这一行
 
-export const metadata = getMetadata({ title: "Scaffold-ETH 2 App", description: "Built with 🏗 Scaffold-ETH 2" });
+export const metadata = getMetadata({ title: "Web3平台", description: "构建权威平台" });
 
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
   return (
